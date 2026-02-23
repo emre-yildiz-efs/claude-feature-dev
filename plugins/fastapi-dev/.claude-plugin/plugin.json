@@ -1,0 +1,8 @@
+{
+  "name": "fastapi-dev",
+  "version": "1.0.0",
+  "description": "Feature development workflow for Python/FastAPI brownfield projects with embedded best practices, specialized agents, and auto-linting",
+  "author": {
+    "name": "AlfaLabs"
+  }
+}
