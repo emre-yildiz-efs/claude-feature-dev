@@ -19,10 +19,17 @@ ESLINT_EXIT=$?
 
 # Run prettier
 PRETTIER_OUTPUT=$(npx prettier --write "$FILE_PATH" 2>&1)
+PRETTIER_EXIT=$?
 
 if [[ $ESLINT_EXIT -ne 0 ]]; then
   echo "ESLint found issues in $FILE_PATH:" >&2
   echo "$ESLINT_OUTPUT" >&2
+  exit 2
+fi
+
+if [[ $PRETTIER_EXIT -ne 0 ]]; then
+  echo "Prettier failed on $FILE_PATH:" >&2
+  echo "$PRETTIER_OUTPUT" >&2
   exit 2
 fi
 
