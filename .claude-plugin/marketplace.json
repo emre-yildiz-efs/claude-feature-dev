@@ -1,0 +1,29 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-feature-dev",
+  "description": "Structured, agent-driven feature development workflows for Python/FastAPI and React/TypeScript brownfield projects",
+  "owner": {
+    "name": "AlfaLabs",
+    "email": "dev@alfalabs.com"
+  },
+  "plugins": [
+    {
+      "name": "fastapi-dev",
+      "description": "Feature development workflow for Python/FastAPI brownfield projects with embedded best practices, specialized agents, and auto-linting",
+      "author": {
+        "name": "AlfaLabs"
+      },
+      "source": "./plugins/fastapi-dev",
+      "category": "development"
+    },
+    {
+      "name": "react-dev",
+      "description": "Feature development workflow for ReactJS/TypeScript brownfield projects with embedded best practices, specialized agents, and auto-linting",
+      "author": {
+        "name": "AlfaLabs"
+      },
+      "source": "./plugins/react-dev",
+      "category": "development"
+    }
+  ]
+}
