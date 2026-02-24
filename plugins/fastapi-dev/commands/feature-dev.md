@@ -89,7 +89,13 @@ Initial request: $ARGUMENTS
 **HARD GATE**: Must produce and get approval before any implementation begins.
 
 **Actions**:
-1. Write a design document using this template:
+1. Write a design document using the template below.
+2. **Save the design document to a file** at `docs/designs/YYYY-MM-DD-<feature-name>.md` (use kebab-case for the feature name, e.g. `docs/designs/2026-02-24-user-authentication.md`). Create the `docs/designs/` directory if it does not exist.
+3. Tell the user the file path so they can review it in their IDE.
+4. **User must explicitly approve** before proceeding to Phase 6.
+5. If user requests changes, update the file and re-present.
+
+**Design Document Template:**
 
 ```markdown
 # Design Document: [Feature Name]
@@ -155,10 +161,6 @@ How to revert if something goes wrong.
 ## 8. Open Questions
 Any remaining uncertainties (should be empty before approval).
 ```
-
-2. Present the design document to the user
-3. **User must explicitly approve** before proceeding to Phase 6
-4. If user requests changes, revise and re-present
 
 ---
 

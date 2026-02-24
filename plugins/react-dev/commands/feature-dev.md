@@ -95,7 +95,13 @@ After agents complete:
 
 **Goal**: Produce a complete, approval-ready design document.
 
-Write the design document using this template:
+1. Write the design document using the template below.
+2. **Save the design document to a file** at `docs/designs/YYYY-MM-DD-<feature-name>.md` (use kebab-case for the feature name, e.g. `docs/designs/2026-02-24-dashboard-page.md`). Create the `docs/designs/` directory if it does not exist.
+3. Tell the user the file path so they can review it in their IDE.
+4. **User must explicitly approve** before proceeding to Phase 6.
+5. If user requests changes, update the saved file and re-present.
+
+**Design Document Template:**
 
 ```markdown
 # Design Document: [Feature Name]
@@ -103,36 +109,40 @@ Write the design document using this template:
 **Date**: YYYY-MM-DD  |  **Author**: Claude (with user guidance)  |  **Status**: Pending Approval
 
 ## 1. Overview
+Brief description of the feature and its purpose.
+
 ## 2. Requirements
+Numbered functional and non-functional requirements from user answers.
+
 ## 3. Codebase Context
+Existing patterns and conventions to follow, with file references.
+
 ## 4. Architecture Decision
 ### Chosen Approach
 ### Rationale
 ### Trade-offs
+
 ## 5. Detailed Design
 ### Files to Create
 ### Files to Modify
 ### Component Hierarchy
+Component tree with props.
 ### Data Flow
+Data flow from API through hooks to components.
 ### State Management
+State shape and where each piece lives (server, client, URL, form state).
+
 ## 6. Test Plan
+What to test at each level -- unit (hooks, utilities), component (rendering, interactions), integration (user flows), accessibility (axe, keyboard).
+
 ## 7. Rollback Plan
+How to safely revert after merge.
+
 ## 8. Open Questions
+Unresolved items that do not block implementation (should be empty before approval).
 ```
 
-Section guidance:
-- **Overview**: Brief description of the feature and its purpose.
-- **Requirements**: Numbered functional and non-functional requirements from user answers.
-- **Codebase Context**: Existing patterns and conventions to follow, with file references.
-- **Architecture Decision**: Chosen approach, rationale, and trade-offs.
-- **Detailed Design**: Files to create/modify, component tree with props, data flow from API through hooks to components, state shape and where each piece lives (server, client, URL, form state).
-- **Test Plan**: What to test at each level -- unit (hooks, utilities), component (rendering, interactions), integration (user flows), accessibility (axe, keyboard).
-- **Rollback Plan**: How to safely revert after merge.
-- **Open Questions**: Unresolved items that do not block implementation.
-
-Present the full document and ask for explicit approval.
-
-**HARD GATE**: Do not write any implementation code until the user approves the design document. If the user requests changes, revise and re-present until approved.
+**HARD GATE**: Do not write any implementation code until the user approves the design document. If the user requests changes, update the saved file and re-present until approved.
 
 ---
 
